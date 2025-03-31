@@ -96,7 +96,7 @@ section {
   color: #e94641;
   font-weight: 800;
 }
-.article-container p {
+.article-text p {
   font-size: 20px;
   text-align: center;
   margin-top: 10px;
@@ -108,6 +108,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  width: 80%;
   padding-left: 120px;
   padding-right: 120px;
 }
@@ -117,7 +118,37 @@ section {
   flex-wrap: wrap;
   width: 30%;
 }
-
+.card-body {
+  flex: 1 1 auto;
+  padding-bottom: 40px;
+  /* padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x); */
+  color: var(--bs-card-color);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.card-img,
+.card-img-top {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius);
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.background-container {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  /* justify-content: center; */
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  /* opacity: 0.3; */
+  /* z-index: -1; */
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 60px;
+}
 .btn-secondary {
   --bs-btn-color: #ffffff;
   --bs-btn-bg: #ea4e49;
@@ -128,6 +159,22 @@ section {
   --bs-btn-focus-shadow-rgb: 130, 138, 145;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #eb5550;
+  font-weight: 800;
+  font-size: 25px;
+}
+.col {
+  flex: 0;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  justify-content: center;
+  gap: 10px;
 }
 
 .video-container iframe {
@@ -158,7 +205,17 @@ section {
     width: 100%; /* Ocupa todo el ancho en móviles */
   }
 }
-
+.img-fondo-home {
+  width: 100%;
+  height: auto;
+  /* position: absolute; */
+  /* top: 150px; */
+}
+.number-card {
+  color: #e94641;
+  font-size: clamp(20px, 5vw, 50px);
+  font-weight: 800;
+}
 .formas-container {
   width: 100%;
   height: 100%;
