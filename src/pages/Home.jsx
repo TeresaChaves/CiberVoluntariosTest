@@ -235,8 +235,8 @@ function Home() {
                     <Form.Label htmlFor="lastName"></Form.Label>
                     <Form.Control
                       type="text"
-                      placeholder="Apellido"
-                      aria-label="Apellido"
+                      placeholder="Apellidos"
+                      aria-label="Apellidos"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
                       required

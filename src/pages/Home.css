@@ -312,6 +312,15 @@ section {
   .container_image-final {
     margin: 10px 0;
   }
+  td {
+    font-size: 12px;
+  }
+  th {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1144px) {
