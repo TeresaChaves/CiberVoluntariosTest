@@ -5,3 +5,8 @@
   --bs-btn-hover-color: #e94641;
   --bs-btn-hover-bg: white;
 }
+
+a {
+  color: white;
+  text-decoration: underline;
+}

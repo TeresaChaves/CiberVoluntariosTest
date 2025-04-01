@@ -58,7 +58,12 @@
     ),
     linear-gradient(to right, #e94641 0%, transparent 100%);
   pointer-events: none;
-  z-index: -1; /* El gradiente debe estar debajo del contenido del header */
+  z-index: -1;
+}
+
+.form-control {
+  --bs-border-radius: 50px;
+  line-height: 2.5;
 }
 
 .container-header {
@@ -80,6 +85,7 @@
 }
 section {
   margin-bottom: 50px;
+  position: relative;
 }
 
 .main-content article {
@@ -91,13 +97,14 @@ section {
   align-items: center;
   gap: 30px;
 }
-.article-container h2 {
-  font-size: 50px;
+.title_home {
+  font-size: clamp(20px, 5vw, 50px);
   color: #e94641;
   font-weight: 800;
+  text-align: center;
 }
 .article-text p {
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 20px);
   text-align: center;
   margin-top: 10px;
 }
@@ -107,10 +114,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  width: 80%;
-  padding-left: 120px;
-  padding-right: 120px;
+  width: 70%;
 }
 .header-image-container {
   display: flex;
@@ -137,17 +141,19 @@ section {
 .background-container {
   width: 80%;
   height: auto;
-  position: absolute;
   display: flex;
-  /* justify-content: center; */
   background-color: #f2f2f2;
   border-radius: 20px;
-  /* opacity: 0.3; */
-  /* z-index: -1; */
+  z-index: 2;
   flex-direction: column;
   align-content: center;
   align-items: center;
   padding: 60px;
+  gap: 30px;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
 }
 .btn-secondary {
   --bs-btn-color: #ffffff;
@@ -159,12 +165,13 @@ section {
   --bs-btn-focus-shadow-rgb: 130, 138, 145;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #eb5550;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 25px;
+  border-radius: 5px;
+  padding-right: 18px;
+  padding-left: 18px;
 }
-.col {
-  flex: 0;
-}
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -182,6 +189,9 @@ section {
   height: 100%;
   border-radius: 20px;
 }
+.card {
+  height: 100%;
+}
 
 .video-container {
   position: relative;
@@ -193,23 +203,9 @@ section {
   z-index: 2; /* Mantiene la proporción del video */
 }
 
-/* Media query para hacer el video responsive en móviles */
-@media (max-width: 1300px) {
-  .video-container {
-    width: 90%; /* Reduce el tamaño en pantallas pequeñas */
-  }
-}
-
-@media (max-width: 768px) {
-  .video-container {
-    width: 100%; /* Ocupa todo el ancho en móviles */
-  }
-}
 .img-fondo-home {
   width: 100%;
   height: auto;
-  /* position: absolute; */
-  /* top: 150px; */
 }
 .number-card {
   color: #e94641;
@@ -230,13 +226,68 @@ section {
   height: 100%;
   overflow: hidden;
 }
+.container-image-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
 
-@media screen and (max-width: 1144px) {
-  .container-header p {
+.img-final {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contenedor para los logos */
+.container_logos-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* espacio entre los logos */
+  flex-wrap: wrap; /* los logos se ajustan si hay poco espacio */
+}
+
+.img-logo-creditos {
+  max-width: 100%;
+  height: auto;
+  width: 120px; /* tamaño base de los logos */
+}
+
+.img-logo-creditos {
+  width: 350px;
+  height: auto;
+}
+
+.container_logos-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 100px; */
+  gap: 120px;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+/* Media query para hacer el video responsive en móviles */
+@media (max-width: 1300px) {
+  .video-container {
+    width: 90%;
+  }
+  .background-container {
     width: 100%;
+    padding: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 100%;
+  }
+  .background-container {
+    width: 100%;
+    padding: 10px;
+  }
   .bg-light {
     padding-right: 30px;
     padding-left: 30px;
@@ -244,5 +295,27 @@ section {
   }
   .container-header {
     margin-left: 30px;
+  }
+  .container_logos-final {
+    justify-content: center;
+  }
+
+  .img-logo-creditos {
+    width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .img-logo-creditos {
+    width: 80px;
+  }
+
+  .container_image-final {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1144px) {
+  .container-header p {
+    width: 100%;
   }
 }

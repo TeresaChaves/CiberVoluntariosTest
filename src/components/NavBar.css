@@ -15,6 +15,16 @@
   padding-left: 112px;
   z-index: 2;
 }
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-white);
+  background-color: var(--bs-white);
+  border: var(--bs-border-width) solid var(--bs-white);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
 .btn-primary {
   --bs-btn-color: #f1eded;
   --bs-btn-bg: #e94641;

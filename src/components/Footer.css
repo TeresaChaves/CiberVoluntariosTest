@@ -1,0 +1,201 @@
+/* General styles for the footer */
+.footer {
+  /* position: relative; */
+  width: 100%;
+  background-image: url("../assets/img/Subtract.png"); /* Cambia la ruta según tu estructura de carpetas */
+  /* background-size: cover; */
+  background-position: center;
+  /* padding: 50px 0; */
+  height: 614px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container to center the content */
+.container-footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  flex-direction: column;
+  padding-top: 100px;
+  max-width: 1200px;
+  /* max-width: 1200px; */
+  /* padding-right: 20px; */
+  /* align-content: center; */
+}
+
+.footer-column svg {
+  margin-right: 10px;
+}
+.container-logo-footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* max-width: 1200px; */
+  /* box-sizing: border-box; */
+  width: 100%;
+}
+.custom-hr-final {
+  border: 0;
+  height: 2px;
+  background-color: white;
+  margin: 20px 0;
+  color: white;
+  width: 100%;
+}
+/* Flexbox to align the columns */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* max-width: 1200px; */
+  /* padding: 0 20px; */
+  box-sizing: border-box;
+  gap: 60px;
+}
+
+/* Individual columns */
+.footer-column {
+  flex: 1;
+}
+
+/* Styling for links and headings */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: white; /* Cambia el color según lo desees */
+  font-size: 18px;
+}
+
+.footer-column a:hover {
+  color: var(--bs-black);
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.custom-hr {
+  border: 0;
+  height: 2px;
+  background-color: white;
+  margin: 20px 0;
+}
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Esto hace que los elementos estén en una fila */
+  gap: 20px;
+  color: white;
+  /* Espacio entre los iconos */
+}
+
+.political-rows {
+  gap: 30px;
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+
+.social-icons li {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el texto con el icono */
+}
+
+.social-icons a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 18px; /* Tamaño de la fuente */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el icono y el texto */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Responsive design: stacking columns vertically on small screens */
+
+@media (max-width: 1200px) {
+  .container-footer {
+    padding: 20px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-footer {
+    padding-top: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer-column a {
+    font-size: 16px;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+  }
+  .footer-logo {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 120px;
+  }
+  .container-logo-footer {
+    justify-content: center;
+  }
+  .footer {
+    position: relative;
+    width: 100%;
+    background-image: url("../assets/img/Subtract.png");
+    background-size: cover;
+    background-position: top;
+    /* padding: 50px 0; */
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .political-rows li {
+    font-size: 10px;
+  }
+}
+a {
+  color: white;
+  text-decoration: none;
+}

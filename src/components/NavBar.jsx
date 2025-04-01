@@ -1,14 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/img/logo.png";
-import "./NavBar.css"; // Importa tu archivo CSS para estilos personalizados
+import "./NavBar.css";
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img className="logo" src={logo} alt="Mi Empresa" height="40" />
+        <a className="navbar-brand" href="/">
+          <img
+            className="logo"
+            src={logo}
+            alt="logo_cibervoluntarios"
+            height="40"
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -25,17 +30,17 @@ function NavBar() {
           id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#que-es">
                 ¿Qué es?
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#que-vamos-a-aprender">
                 ¿Que vamos a aprender?
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#solicita-formacion">
                 Solicita Informacion
               </a>
             </li>
